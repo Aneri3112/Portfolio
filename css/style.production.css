@@ -260,11 +260,89 @@ a:active {
   opacity: 0.25;
 }
 
-.service {
+/*   */
+
+.service{
+  display: inline-block;
+  width: 33%;
+}
+
+/* end grid fallback */
+
+/* #### START OF Project List styling #### */
+@supports (display: grid) {
+  .services {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 20px;
+  }
+
+  .service {
+    padding: 20px;
+    width: auto;
+    min-height: auto;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .website_image {
+    max-width: 100%;
+    border-radius: 0%;
+    margin-top: 10px;
+  }
+}
+
+/* #### END OF Project List styling #### */
+
+/* #### START OF Responsive Design styling #### */
+
+@media all and (max-width: 750px) {
+
+  /* shared code */
+  .services {
+    grid-gap: 10px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .services {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .services {
+    -ms-grid-columns: 1fr 10px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/*   */
+
+/*.service {
   background: #000000;
   color: #fdfdfd;
   display: inline-block;
   width: 33%;
+  
+  
 }
 
 @supports (display: grid) {
@@ -275,6 +353,8 @@ a:active {
     grid-template-columns: auto auto auto auto;
     gap: 20px 20px;
     margin: 0;
+    row-gap: 10%;
+    margin-bottom: 20%;
   }
 
   .service {
@@ -283,6 +363,7 @@ a:active {
     margin: 0;
     color: #fdfdfd;
     padding: 10px;
+    
   }
 
   .service:last-child {
@@ -298,6 +379,7 @@ a:active {
   .services {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    row-gap: 5%;
   }
 }
 
@@ -323,6 +405,25 @@ a:active {
   }
 }
 
+.website_image {
+  height: 50%;
+  width: 70%;
+  border-radius: 0%;
+  align-items: center;
+  text-align: center;
+  margin-left: 12%;
+  margin-top: 5%;
+}
+
+.meet_image {
+  height: 28%;
+  width: 70%;
+  border-radius: 0%;
+  align-items: center;
+  text-align: center;
+  margin-left: 12%;
+  margin-top: 5%;
+}
 /* About Me */
 
 .about-me {
