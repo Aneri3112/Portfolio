@@ -36,9 +36,9 @@ $(document).ready(function(){
   // owl carousel script
   $('.carousel').owlCarousel({
       margin: 20,
-      //loop: true,
+      loop: true,
       //autoplay: true,
-      //autoplayTimeOut: 2000,
+      autoplayTimeOut: 2000,
       autoplayHoverPause: true,
       responsive: {
           0:{
