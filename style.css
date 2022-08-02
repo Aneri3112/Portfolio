@@ -399,6 +399,7 @@ section .title::after{
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 .teams .carousel .card:hover .box{
     transform: scale(1.05);
@@ -409,10 +410,10 @@ section .title::after{
     margin: 10px 0 7px 0;
 }
 .teams .carousel .card img{
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 300px;
     object-fit: cover;
-    border: 5px solid;
+    border: 3px solid;
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover img{
@@ -420,6 +421,10 @@ section .title::after{
 }
 .teams .carousel .card:hover a{
     color: #fff;
+}
+.teams .carousel .card .picture{
+  text-decoration: none;
+  color: white;
 }
 .owl-dots{
     text-align: center;
